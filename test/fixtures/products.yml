@@ -1,13 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
-
-two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+valid_product_entry: 
+  title:       Barista Perfetta
+  description: The Barista Perfetta Plus is a compact elegant machine enabling you to customise your perfect cup of coffee.
+               This compact appliance requires only little space, making it perfectly suitable for even the smallest kitchen.
+  image_url:   coffee2.jpg
+  price:       49.50
+   
