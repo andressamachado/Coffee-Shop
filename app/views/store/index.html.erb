@@ -1,0 +1,31 @@
+<div class='w-full'>
+  <% if notice.present? %>
+    <p class='py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block' id='notice'>
+      <%= notice %>
+    </p>
+  <% end %>
+
+  <h1 class='font-bold text-xl pb-8'> Products Catalog </h1>
+
+  <ul>
+    <% @products.each do |product| %>
+
+      <li class='flex pb-8'>
+
+        <div class='shrink-0' style="flex-basis: 250px;flex-shrink:0;">
+          <%= image_tag(product.image_url, class: 'static object-contain shadow rounded-lg')%>
+        </div>
+
+        <div class='mb-5 px-5'>
+          <h2 class='font-bold text-lg'> <%= product.title %> </h2>
+
+          <p class='mb-3'> <%= sanitize(product.description) %> </p>
+
+          <div class="mt-8">
+            <%= product.price %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
