@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'store#index', as: 'store_index'
+  root to: 'store#index'
 
   resources :products
 end
