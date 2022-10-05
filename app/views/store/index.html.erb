@@ -22,7 +22,7 @@
           <p class='mb-3'> <%= sanitize(product.description) %> </p>
 
           <div class="mt-8">
-            <%= product.price %>
+            <%= number_to_currency(product.price) %>
           </div>
         </div>
       </li>
