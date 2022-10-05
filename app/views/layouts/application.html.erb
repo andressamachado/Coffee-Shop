@@ -20,8 +20,11 @@
       <%= render partial: "shared/navbar" %>
     </header>
  
-    <main class='container mx-auto mt-4 px-5 flex'>
-      <%= yield %>
-    </main>
+    <section class="flex">
+      <main class='container mx-auto mt-4 px-5 flex'>
+        <%= yield %>
+      </main>
+    </section>
+    
   </body>
 </html>
