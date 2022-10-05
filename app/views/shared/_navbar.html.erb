@@ -1,5 +1,5 @@
 <nav class='bg-gray-100'>
-  <div class='px-8 py-4 mx-auto'>
+  <div class='px-6 py-4 mx-auto'>
     <div class='flex justify-between'>
       <div class='flex'>
         <!-- logo -->
@@ -18,18 +18,26 @@
 
       <!-- secondary nav -->
       <div class='flex items-center'>
-        <div class='md:flex items-center space-x-3 text-gray-400'>
-          <a href="/login" class='pt-2 underline underline-offset-2 text-yellow-700 hover:text-yellow-900'>Login</a>
-          <a href="/signup" class='px-1 py-2 mt-2 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
+
+        <!--login / signup for medium up screens-->
+         <div class='hidden md:block md:flex items-center space-x-1 text-gray-400'>
+          <a href="/login" class='pt-2 mr-3 underline underline-offset-2 text-yellow-700 hover:text-yellow-900'>Login</a>
+          <a href="/signup" class='px-1 py-1 mt-2 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
         </div>
 
         <!-- mobile button -->
         <div class='md:hidden flex items-center '>
-          <button class='mobile-menu-button ml-4'>
+          <button class='mobile-menu-button mr-4'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
+        </div>
+
+        <!--login / signup for small screens -->
+         <div class='md:hidden md:flex items-center space-x-1 text-gray-400'>
+          <a href="/login" class='pt-2 underline underline-offset-2 text-yellow-700 hover:text-yellow-900'>Login</a>
+          <a href="/signup" class='px-1 py-1 mt-2 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
         </div>
       </div>
     </div>
