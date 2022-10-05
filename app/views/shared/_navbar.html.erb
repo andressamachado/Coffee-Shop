@@ -17,35 +17,32 @@
       </div>
 
       <!-- secondary nav -->
-      <div class='hidden md:flex items-center space-x-3 text-gray-400'>
-        <a href="/login" class='px-1 pt-2 underline underline-offset-2 text-yellow-700 hover:text-yellow-900'>Login</a>
-        <a href="/signup" class='px-2 py-2 mt-2 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
-      </div>
+      <div class='flex items-center'>
+        <div class='md:flex items-center space-x-3 text-gray-400'>
+          <a href="/login" class='pt-2 underline underline-offset-2 text-yellow-700 hover:text-yellow-900'>Login</a>
+          <a href="/signup" class='px-1 py-2 mt-2 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
+        </div>
 
-      <!-- mobile button -->
-      <div class='md:hidden flex items-center '>
-        <button class='mobile-menu-button'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
+        <!-- mobile button -->
+        <div class='md:hidden flex items-center '>
+          <button class='mobile-menu-button ml-4'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- mobile menu -->
-  <div class='mobile-menu hidden md:hidden'>
-    <div>
-      <a href="/about" class='block py-2 px-4 text-sm hover:bg-gray-200'>About</a>
-      <a href="/contact" class='block py-2 px-4 text-sm hover:bg-gray-200'>Contact</a>
-      <a href="/faq" class='block py-2 px-4 text-sm hover:bg-gray-200'>FAQ</a>
-    </div> 
+    <div class='mobile-menu hidden md:hidden'>
+      <div>
+        <a href="/about" class='block py-2 px-4 text-sm hover:bg-gray-200'>About</a>
+        <a href="/contact" class='block py-2 px-4 text-sm hover:bg-gray-200'>Contact</a>
+        <a href="/faq" class='block py-2 px-4 text-sm hover:bg-gray-200'>FAQ</a>
+      </div> 
     </br>
-    <div class='flex items-center pb-4'>
-      <a href="/login" class='block pl-4 underline underline-offset-2 text-yellow-900 hover:text-yellow-700'>Login</a>
-      <a href="/signup" class='px-1 py-1 mt-2 mx-3 bg-amber-700 hover:bg-amber-400 text-neutral-200 hover:text-yellow-700 rounded hover:shadow transition duration-500'>Sign Up</a>
-    </div>
-  </div>
 </nav>
 
 <!-- Javascript code for dropdown menu -->
