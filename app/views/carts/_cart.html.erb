@@ -1,7 +1,19 @@
 <div id="<%= dom_id cart %>">
-  <% if action_name != "show" %>
-    <%= link_to "Show this cart", cart, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this cart', edit_cart_path(cart), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+  <h1 class='font-bold text-xl pb-8'> Your Shopping Cart </h1>
+    
+  </br>
+
+  <table class="table-auto">
+    <%= render cart.line_items %>
+
+    <tfoot>
+      <tr>
+        <th class="text-right pt-5 border-t-2 border-black" colspan="3">Total:</th>
+        <td class="text-right pt-5 pl-3 font-bold border-t-2 border-black">
+          <%= number_to_currency(cart.total_price) %>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
 </div>

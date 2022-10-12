@@ -16,11 +16,14 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create line_item" do
-    assert_difference("LineItem.count") do
-      post line_items_url, params: { line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } }
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:valid_product_entry).id }
     end
 
-    assert_redirected_to line_item_url(LineItem.last)
+    follow_redirect!
+
+    assert_select 'h1', 'Your Shopping Cart'
+    assert_select 'td', "Solis Barista Perfetta Plus Espresso Machine"
   end
 
   test "should show line_item" do
@@ -34,7 +37,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update line_item" do
-    patch line_item_url(@line_item), params: { line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } }
+    patch line_item_url(@line_item), params: { line_item: { product_id: @line_item.product_id } }
     assert_redirected_to line_item_url(@line_item)
   end
 

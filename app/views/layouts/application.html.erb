@@ -17,9 +17,10 @@
     <header>
       <%= image_tag 'temporary1.png', alt: 'cafe-brazil', class:'object-cover' %>
       <h1> <%= @page_title %> </h1>
-      <%= render partial: "shared/navbar" %>
     </header>
  
+    <%= render partial: "shared/navbar" %>
+
     <section class="flex mt-8">
       <main class='container mx-auto mt-8 px-8 flex'>
         <%= yield %>

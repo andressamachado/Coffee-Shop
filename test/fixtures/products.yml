@@ -1,8 +1,28 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  title: MyString
+  description: MyText
+  image_url: lorem.jpg
+  price: 9.99
+
+two:
+  title: MyString
+  description: MyText
+  image_url: lorem.jpg
+  price: 9.99
+
 valid_product_entry: 
-  title:       Barista Perfetta
-  description: The Barista Perfetta Plus is a compact elegant machine enabling you to customise your perfect cup of coffee.
-               This compact appliance requires only little space, making it perfectly suitable for even the smallest kitchen.
+  title:       Solis Barista Perfetta Plus Espresso Machine
+  description: <p> <em> Robust, Reliable, and Resilient </em>
+               <br>
+               The Barista Perfetta Plus is a compact elegant machine
+               enabling you to customise your perfect cup of coffee.
+               This compact appliance requires only little space, making
+               it perfectly suitable for even the smallest kitchen.
+               <br>
+               A product developed with a passion for coffee to get the
+               best out of every single coffee bean. The perfect tool to
+               create coffee as a real barista does. </p>
   image_url:   coffee2.jpg
-  price:       49.50
+  price:       359.00
    
