@@ -6,7 +6,7 @@ class StoreControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select 'nav a', minimum: 10
-    assert_select 'h2', 'Barista Perfetta'
+    assert_select 'h2', 'Solis Barista Perfetta Plus Espresso Machine'
     assert_select 'div', /\$[,\d]+\.\d\d/
   end
 end

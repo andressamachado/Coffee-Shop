@@ -20,7 +20,7 @@ Product.create!(title: 'ECM Mechanika V Slim + S-Automatik 64 Bundle',
                     x1 ECM Leveler
                     <br>
                     x1 ECM portafiler funnel </p>),
-                image_url: 'coffee1.jpeg',
+                image_url: 'coffee1.jpg',
                 price: 1999.00)
 # . . . . . . .
 
@@ -36,7 +36,7 @@ Product.create!(title: 'Solis Barista Perfetta Plus Espresso Machine',
                     A product developed with a passion for coffee to get the
                      best out of every single coffee bean. The perfect tool to
                      create coffee as a real barista does. </p>),
-                image_url: 'coffee2.jpeg',
+                image_url: 'coffee2.jpg',
                 price: 359.00)
 # . . . . . . .
 
@@ -55,7 +55,7 @@ Product.create!(title: 'La Pavoni PRH Copper-Brass Espresso Machine',
                      is made exactly to his requirements.
                     <br>
                     16 cup capacity boiler </p>),
-                image_url: 'coffee3.jpeg',
+                image_url: 'coffee3.jpg',
                 price: 806.65)
 # . . . . . . .
 
@@ -74,7 +74,7 @@ Product.create!(title: 'La Pavoni en Europiccola Espresso Machine',
                      enabling a level of control not possible on an electric pump machine.
                     <br>
                     16 cup capacity boiler </p>),
-                image_url: 'coffee4.jpeg',
+                image_url: 'coffee4.jpg',
                 price: 1125.00)
 # . . . . . . .
 
@@ -91,7 +91,7 @@ Product.create!(title: 'La Pavoni Europiccola EN',
                     infuse the coffee in the filter holder. The lever is then lowered causing the piston to force
                     the water through the coffee into the cup. The user can therefore vary the speed at which the
                     water passes through the coffee ensuring it is made exactly to his requirements. </p>),
-                image_url: 'coffee5.jpeg',
+                image_url: 'coffee5.jpg',
                 price: 975.00)
 # . . . . . . .
 
@@ -105,6 +105,6 @@ Product.create!(title: 'Rocket re Doppia Espresso Machine',
                     <br>
                     This does not mean the Doppia is any less of a machine, rather with clever engineering, the Doppia
                      clearly outperforms most machines in this class. </p>),
-                image_url: 'coffee6.jpeg',
+                image_url: 'coffee6.jpg',
                 price: 6600.00)
 # . . . . . . .
