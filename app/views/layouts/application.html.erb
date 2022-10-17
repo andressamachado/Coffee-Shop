@@ -8,9 +8,9 @@
     <%= stylesheet_link_tag 'tailwind', 'inter-font', 'data-turbo-track': 'reload' %>
     <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Caveat&display=swap' rel='stylesheet'>
   </head>
 
   <body>
@@ -19,10 +19,10 @@
       <h1> <%= @page_title %> </h1>
     </header>
  
-    <%= render partial: "shared/navbar" %>
+    <%= render partial: 'shared/navbar' %>
 
-    <section class="flex mt-8">
-      <main class='container mx-auto mt-8 px-8 flex'>
+    <section class='flex p-8 m-8'>
+      <main class='container mx-auto pt-8 flex'>
         <%= yield %>
       </main>
     </section>
