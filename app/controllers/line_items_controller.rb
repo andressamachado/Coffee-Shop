@@ -28,6 +28,13 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.replace(
+            :cart,
+            partial: 'layouts/cart',
+            locals: { cart: @cart }
+          )
+        end
         format.html { redirect_to cart_url(@line_item.cart), notice: 'Item successfully added.' }
         format.json { render :show, status: :created, location: @line_item }
       else
