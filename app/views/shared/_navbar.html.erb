@@ -1,32 +1,50 @@
-<nav class='block bg-gray-100 px-8 py-4 mx-auto'>
-  <div class=''>
-    
+<nav class='hidden lg:flex lg:flex-col shrink-0 mx-auto'>
     <!-- primary nav -->
-    <div class='flex flex-col'>
+    <div class='flex flex-col px-4'>
 
       <!-- logo -->
-      <div class='flex py-2 pr-3 mx-8'> 
+      <div class='flex pt-3 pb-8'> 
         <%= image_tag 'logo.svg', class:'pr-2'%>
-        <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold text-4xl pb-1 mr-1'%>
+        <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold text-4xl pb-1 mr-1 shrink-0'%>
       </div>
 
       <!-- pages -->
-      <div class='md:flex flex-col  text-gray-400'>
-        <a href='/about' class='px-1 pt-2 hover:text-gray-900'>About</a>
-        <a href='/contact' class='px-1 pt-2 hover:text-gray-900'>Contact</a>
-        <a href='/faq' class='px-1 pt-2 hover:text-gray-900'>FAQ</a>
+      <div class='flex flex-col text-gray-400'>
+        <a href='/about' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>About</a>
+        <a href='/contact' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>Contact</a>
+        <a href='/faq' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>FAQ</a>
       </div>
     </div>
     
     <!-- secondary nav -->
-    <div class=''>
-
+    <div class='pt-9 px-8'>
       <!--login / signup for medium up screens-->
       <div class='flex flex-col md:block md:flex text-gray-400'>
         <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 text-center rounded-lg hover:shadow transition duration-500'>Sign Up</a>
-        <a href='/login' class='pt-2 mr-2 underline underline-offset-2 text-amber-700 hover:text-amber-600 text-center'>Login</a>
+        <a href='/login' class='pt-3 mr-2 underline underline-offset-2 text-amber-700 hover:text-amber-600 text-center'>Login</a>
       </div>
 
+    </div>
+</nav>
+
+<!-- Navbar for small screens -->
+<nav class='lg:hidden bg-gray-100'>
+  <div class='px-6 py-4 mx-auto'>
+    <div class='flex'>
+      
+      <!-- logo -->
+      <div class='flex flex-grow'> 
+        <%= image_tag 'logo.svg', class:'pr-2'%>
+        <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold sm:text-3xl text-2xl pb-1 mr-1 shrink-0'%>
+      </div>
+
+      <!-- Hamburger button -->
+      <button class='mobile-menu-button'>
+        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+          <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+        </svg>
+      </button>
+        
     </div>
   </div>
 </nav>
