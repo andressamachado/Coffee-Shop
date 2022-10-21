@@ -27,7 +27,7 @@
 </nav>
 
 <!-- Navbar for smaller screens -->
-<nav class='lg:hidden flex justify-between bg-gray-100 px-6 py-4 mx-auto'>
+<nav class='hidden lg:hidden md:flex justify-between bg-gray-100 px-6 py-4 mx-auto'>
   <!-- primary nav -->
   <div class='flex items-center'>
     <!-- logo -->
@@ -52,7 +52,40 @@
   </div>
 </nav>
 
-<!-- Javascript code for dropdown menu -->
+<!-- Navbar for mobile -->
+<nav class='lg:hidden md:hidden shrink-0 bg-gray-100 px-6 py-4 mx-auto'>
+  <div class='flex justify-between'>
+    <!-- logo -->
+    <div class='flex items-center'>
+      <%= image_tag 'logo.svg', class:'pr-2'%>
+      <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold sm:text-3xl text-2xl pb-1 mr-1 shrink-0'%>
+    </div>
+
+    <!-- Hamburger button -->
+    <button class='mobile-menu-button'>
+      <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+        <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+      </svg>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div class='mobile-menu hidden md:hidden flex flex-col'>
+    <a href='/about' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>About</a>
+    <a href='/contact' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>Contact</a>
+    <a href='/faq' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>FAQ</a>
+
+    </br>
+    
+    <!--login / signup for small screens -->
+    <div class='flex flex-col items-center space-x-1 text-gray-400'>
+      <a href='/login' class='pt-2 underline underline-offset-2 text-amber-700 hover:text-amber-600'>Login</a>
+      <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 rounded-lg hover:shadow transition duration-500'>Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Javascript code for mobile dropdown menu -->
 <script>
   const btn = document.querySelector('button.mobile-menu-button');
   const menu = document.querySelector('.mobile-menu');
