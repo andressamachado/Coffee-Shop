@@ -1,17 +1,17 @@
 <div id='<%= dom_id cart %>'>
   <!-- page`s title -->
   <div>
-    <h1 class='text-center tracking-tighter antialiased font-semibold text-6xl text-slate-900/75'> Your Shopping Cart </h1>
+    <h1 class='pt-5 mt-5 text-center tracking-tighter antialiased font-semibold text-2xl text-slate-900/75'> Your Shopping Cart </h1>
 
-    <div class='pb-8'> 
+    <div class=''> 
       <p class='font-caveat text-center antialiased text-2xl text-slate-700/75'> Level up your in-home coffee experience </p>
     </div>
+
+    </br>
   </div>
-    
-  </br>
 
   <!-- cart products list -->
-  <table class='table-auto mt-8'>
+  <table class='table-auto mt-4'>
     <%= render cart.line_items %>
 
     <tfoot>
