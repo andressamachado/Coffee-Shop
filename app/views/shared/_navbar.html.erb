@@ -1,116 +1,86 @@
 <!-- Navbar for lg screens -->
-<div class='static bg-stone-100 hidden lg:block'>
-  <nav class='flex justify-between '>
-
-    <!-- primary nav -->
-    <div class='flex px-4 pb-3'>
-      <!-- logo -->
-      <div class='flex pt-3 pr-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'> 
-        <%= image_tag 'logo.svg', class:'pr-2'%>
-        <%= link_to 'Café Brazil', store_index_path, class:'font-caveat items-center text-yellow-800  font-semibold text-4xl pb-1 shrink-0'%>
-      </div>
-
-      <!-- pages -->
-      <div class='flex flex-row pt-4 text-xl tracking-tighter text-stone-400'>
-        <a href='/about' class='px-3 pt-2 antialiased hover:text-red-700 hover:overline'>About</a>
-        <a href='/contact' class='px-1 pt-2 antialiased hover:text-red-700 hover:overline'>Contact</a>
-        <a href='/faq' class='px-3 pt-2 antialiased hover:text-red-700 hover:overline'>FAQ</a>
-      </div>
-    </div>
-
-    <!-- secondary nav -->
-    <div class=''>
-      <!--login / signup / cart-->
-      <div class='flex justify-end px-3 pb-1 pt-3'>
-        <a href='/login' class='pt-3 mr-4 underline underline-offset-2 text-red-800 hover:text-amber-600 text-center'>Login</a>
-        <a href='/signup' class='px-5 py-1 mt-2 mr-1 bg-red-800 bg-gradient-to-tr hover:from-red-800 hover:to-red-700 text-neutral-200 text-center rounded-lg hover:shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500'>Sign Up</a>
-        <!-- cart button -->
-        <button class='cart-btn active:bg-stone-200 rounded-xl drop-shadow-lg mt-1 px-2'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+<nav class="bg-stone-100">
+  <div class="flex mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="flex h-20 items-center justify-between">
+      <!-- Hamburger button -->
+      <div class="flex items-center md:hidden">
+        <button class='mobile-menu-button rounded-lg focus:bg-stone-200 drop-shadow-lg focus:outline-none p-3'>
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed. -->
+          <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-7 h-7'>
+            <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+          </svg>
+          <!-- Icon when menu is open. -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
-  </nav>
-
-  <!-- cart menu -->
-  <div class='cart-display absolute hidden flex flex-row shrink-0 right-0 bg-stone-200 rounded-b-2xl rounded-tl-2xl px-8 py-8 mr-5 mt-1 mb-8' style='z-index:1'>
-    <!-- shopping cart -->
-    <div id='cart' class=''>
-      <%= render @cart %>
-    </div>
-  </div>
-</div>
-
-<!-- Navbar for sm and md screens -->
-<div class='static lg:hidden shrink-0 bg-stone-100 px-6 py-4 mx-auto'>
-  <nav class='flex justify-between'>
 
     <!-- logo -->
-    <div class='flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300'>
-      <%= image_tag 'logo.svg', class:'pr-2'%>
-      <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 font-semibold text-3xl pb-1 mr-1 shrink-0'%>
+    <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+      <div class="flex flex-shrink-0 items-center">
+        <div class='flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300'>
+          <%= image_tag 'logo.svg', class:'pr-2'%>
+          <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 font-semibold text-4xl pb-1 mr-1 shrink-0'%>
+        </div>
+      </div>
     </div>
 
-    <!-- Menu -->
-    <div>
-      <!-- Hamburger button -->
-      <button class='mobile-menu-button active:bg-stone-200 rounded-xl drop-shadow-lg duration-300 p-2'>
-        <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-7 h-7'>
-          <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
-        </svg>
-      </button>
+    <!-- secondary navbar -->
+    <div class="flex">
+      <!-- pages -->
+      <div class="hidden md:flex md:ml-6 md:block flex items-center flex-row text-lg tracking-tighter text-stone-400">
+        <a href="#" class="px-3 pt-2 antialiased hover:text-red-700 hover:overline hover:decoration-2">Dashboard</a>
 
-      <!-- cart button -->
-      <button class='mobile-cart-btn active:bg-stone-200 rounded-xl drop-shadow-lg p-2'>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-        </svg>
-      </button>
-    </div>
-  </div>
+        <a href="#" class="px-3 pt-2 antialiased hover:text-red-700 hover:overline hover:decoration-2">Team</a>
 
-  <!-- mobile menu -->
-  <div class='mobile-menu hidden lg:hidden flex flex-col bg-stone-100 rounded-b-2xl pb-8 text-xl tracking-tighter text-stone-400 antialiased'>
-    <a href='/about' class='block py-2 px-4 text-center hover:bg-stone-200'>About</a>
-    <a href='/contact' class='block py-2 px-4 text-center hover:bg-stone-200'>Contact</a>
-    <a href='/faq' class='block py-2 px-4 text-center hover:bg-stone-200'>FAQ</a>
+        <a href="#" class="px-3 pt-2 antialiased hover:text-red-700 hover:overline  hover:decoration-2">Projects</a>
 
-    </br>
+        <a href="#" class="px-3 pt-2 antialiased hover:text-red-700 hover:overline hover:decoration-2">Calendar</a>
+      </div>
 
-    <!--login / signup for small screens -->
-    <div class='flex flex-col justify-center text-stone-400'>
-      <a href='/login' class='pt-3 mr-4 underline underline-offset-2 text-red-800 hover:text-amber-600 text-center'>Login</a>
-      <a href='/signup' class='px-5 py-1 mt-2 mx-8 bg-red-800 bg-gradient-to-tr hover:from-red-800 hover:to-red-700 text-neutral-200 text-center rounded-lg hover:shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-500'>Sign Up</a>
-    </div>
-  </div>
+      <!-- profile / cart btns -->
+      <div class='flex items-center'>
+        <!-- Profile  -->
+        <div class="relative ml-2">
+          <button type="button" class="flex rounded-lg text-sm focus:bg-stone-200 drop-shadow-lg focus:outline-none p-1" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+            <span class="sr-only">Open user menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a8a29e" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            </svg>
+          </button>
 
-  <!-- cart menu -->
-  <div class='mobile-cart-display absolute hidden lg:hidden flex flex-row shrink-0 right-0 bg-stone-200 rounded-b-2xl px-8 py-8 mr-5 mt-1 mb-8' style='z-index:1'>
-    <!-- shopping cart -->
-    <div id='cart' class=''>
-      <%= render @cart %>
+          <!-- Dropdown menu --> 
+          <div class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none tracking-tight text-stone-500 antialiased" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-100" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-100" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-100" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+            <!--login / signup / cart-->
+            <div class='flex justify-center py-3'>
+              <a href='/login' class='pt-3 mr-4 underline underline-offset-2 text-red-800 hover:text-amber-600 text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500'>Login</a>
+              <a href='/signup' class='px-5 py-1 mt-2 mr-1 bg-red-800 bg-gradient-to-tr hover:from-red-800 hover:to-red-700 text-stone-200 text-center rounded-lg hover:shadow transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500'>Sign Up</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="relative ml-2">
+          <button class='mobile-cart-btn flex rounded-lg object-center text-sm focus:bg-stone-200 drop-shadow-lg focus:outline-none p-1'>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a8a29e" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+          </button>
+
+          <!-- Dropdown menu --> 
+          <div class="absolute hidden flex shrink-0 right-0 z-10 mt-2 px-5 pb-5 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none tracking-tight text-stone-500 antialiased" style='z-index:1' role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <div id='cart' class=''>
+              <%= render @cart %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
-
-<!-- Javascript code for cart display dropdown -->
-<script>
-  const btn_cart = document.querySelector('.cart-btn');
-  const cart_display  = document.querySelector('.cart-display');
-
-  btn_cart.addEventListener('click', () => {
-    cart_display.classList.toggle('hidden');
-  })
-</script>
-
-<!-- Javascript code for mobile cart and mobile dropdown menu -->
-<script>
-  const btn_mobile = document.querySelector('button.mobile-menu-button');
-  const menu = document.querySelector('.mobile-menu');
-
-  btn_mobile.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  })
-</script>
