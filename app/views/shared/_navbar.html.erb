@@ -1,62 +1,91 @@
-<nav class='bg-gray-100'>
-  <div class='px-6 py-4 mx-auto'>
-    <div class='flex justify-between'>
+<!-- Navbar for bigger screens -->
+<nav class='hidden lg:flex lg:flex-col shrink-0 mx-auto'>
+  <!-- primary nav -->
+  <div class='flex flex-col px-4'>
+    <!-- logo -->
+    <div class='flex pt-3 pb-8'> 
+      <%= image_tag 'logo.svg', class:'pr-2'%>
+      <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold text-4xl pb-1 mr-1 shrink-0'%>
+    </div>
 
-      <!-- primary nav -->
-      <div class='flex'>
+    <!-- pages -->
+    <div class='flex flex-col text-gray-400'>
+      <a href='/about' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>About</a>
+      <a href='/contact' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>Contact</a>
+      <a href='/faq' class='px-1 pt-2 font-semibold antialiased hover:text-slate-500'>FAQ</a>
+    </div>
+  </div>
+  
+  <!-- secondary nav -->
+  <div class='pt-9 px-8'>
+    <!--login / signup-->
+    <div class='flex flex-col'>
+      <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 text-center rounded-lg hover:shadow transition duration-500'>Sign Up</a>
+      <a href='/login' class='pt-3 mr-2 underline underline-offset-2 text-amber-700 hover:text-amber-600 text-center'>Login</a>
+    </div>
+  </div>
+</nav>
 
-        <!-- logo -->
-        <div class='flex py-2 pr-3'> 
-          <%= image_tag 'logo.svg', class:'pr-1'%>
-          <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold text-4xl pb-1 mr-1'%>
-        </div>
-
-        <!-- navbar secundary elements -->
-        <div class='hidden md:flex items-center space-x-2 text-gray-400'>
-          <a href='/about' class='px-1 pt-2 mt-1 hover:text-gray-900'>About</a>
-          <a href='/contact' class='px-1 pt-2 mt-1 hover:text-gray-900'>Contact</a>
-          <a href='/faq' class='px-1 pt-2 mt-1 hover:text-gray-900'>FAQ</a>
-        </div>
-      </div>
-
-      <!-- secondary nav -->
-      <div class='flex items-center'>
-
-        <!--login / signup for medium up screens-->
-         <div class='hidden md:block md:flex items-center space-x-1 text-gray-400'>
-          <a href='/login' class='pt-2 mr-2 underline underline-offset-2 text-amber-700 hover:text-amber-600'>Login</a>
-          <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 rounded-lg hover:shadow transition duration-500'>Sign Up</a>
-        </div>
-
-        <!-- mobile button -->
-        <div class='md:hidden flex items-center '>
-          <button class='mobile-menu-button mr-4'>
-            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
-              <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
-            </svg>
-          </button>
-        </div>
-
-        <!--login / signup for small screens -->
-         <div class='md:hidden md:flex items-center space-x-1 text-gray-400'>
-          <a href='/login' class='pt-2 underline underline-offset-2 text-amber-700 hover:text-amber-600'>Login</a>
-          <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 rounded-lg hover:shadow transition duration-500'>Sign Up</a>
-        </div>
-      </div>
+<!-- Navbar for smaller screens -->
+<nav class='hidden lg:hidden md:flex justify-between bg-gray-100 px-6 py-4 mx-auto'>
+  <!-- primary nav -->
+  <div class='flex items-center'>
+    <!-- logo -->
+    <div class='flex pr-3'> 
+      <%= image_tag 'logo.svg', class:'pr-2'%>
+      <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold sm:text-3xl text-2xl pb-1 mr-1 shrink-0'%>
+    </div>
+    
+    <!-- navbar secundary elements -->
+    <div class='items-center space-x-1 text-gray-400'>
+      <a href='/about' class='px-1 pt-2 mt-1 hover:text-gray-900'>About</a>
+      <a href='/contact' class='px-1 pt-2 mt-1 hover:text-gray-900'>Contact</a>
+      <a href='/faq' class='px-1 pt-2 mt-1 hover:text-gray-900'>FAQ</a>
     </div>
   </div>
 
-  <!-- mobile menu -->
-    <div class='mobile-menu hidden md:hidden'>
-      <div>
-        <a href='/about' class='block py-2 px-4 text-sm hover:bg-gray-200'>About</a>
-        <a href='/contact' class='block py-2 px-4 text-sm hover:bg-gray-200'>Contact</a>
-        <a href='/faq' class='block py-2 px-4 text-sm hover:bg-gray-200'>FAQ</a>
-      </div> 
-    </br>
+  <!-- secondary nav -->
+  <div class='flex items-center'>
+    <!--login / signup-->
+    <a href='/login' class='py-1 mr-3 underline underline-offset-2 text-amber-700 hover:text-amber-600 text-center'>Login</a>
+    <a href='/signup' class='px-1 py-1 bg-amber-600 hover:bg-amber-700 text-neutral-200 text-center rounded-lg hover:shadow transition duration-500'>Sign Up</a>
+  </div>
 </nav>
 
-<!-- Javascript code for dropdown menu -->
+<!-- Navbar for mobile -->
+<nav class='lg:hidden md:hidden shrink-0 bg-gray-100 px-6 py-4 mx-auto'>
+  <div class='flex justify-between'>
+    <!-- logo -->
+    <div class='flex items-center'>
+      <%= image_tag 'logo.svg', class:'pr-2'%>
+      <%= link_to 'Café Brazil', store_index_path, class:'font-caveat text-yellow-800 text-opacity-90 font-semibold sm:text-3xl text-2xl pb-1 mr-1 shrink-0'%>
+    </div>
+
+    <!-- Hamburger button -->
+    <button class='mobile-menu-button'>
+      <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+        <path stroke-linecap='round' stroke-linejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
+      </svg>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div class='mobile-menu hidden md:hidden flex flex-col'>
+    <a href='/about' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>About</a>
+    <a href='/contact' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>Contact</a>
+    <a href='/faq' class='block py-2 px-4 text-sm text-center hover:bg-gray-200'>FAQ</a>
+
+    </br>
+    
+    <!--login / signup for small screens -->
+    <div class='flex flex-col items-center space-x-1 text-gray-400'>
+      <a href='/login' class='pt-2 underline underline-offset-2 text-amber-700 hover:text-amber-600'>Login</a>
+      <a href='/signup' class='px-1 py-1 mt-2 bg-amber-600 hover:bg-amber-700 text-neutral-200 rounded-lg hover:shadow transition duration-500'>Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Javascript code for mobile dropdown menu -->
 <script>
   const btn = document.querySelector('button.mobile-menu-button');
   const menu = document.querySelector('.mobile-menu');

@@ -6,7 +6,7 @@
     <% end %>
     
     <!-- user`s shopping cart -->
-    <%= render @cart %>
+    <%= render partial: 'layouts/cart', locals: {cart: @cart } %>
     
     </br>
     </br>
