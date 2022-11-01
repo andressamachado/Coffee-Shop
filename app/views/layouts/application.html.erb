@@ -14,23 +14,23 @@
   </head>
 
   <body>
-    <header>
-      <%= image_tag 'temporary1.png', alt: 'cafe-brazil', class:'object-cover' %>
+    <header>  
       <h1> <%= @page_title %> </h1>
     </header>
  
-    <div class='lg:flex lg:flex-row flex flex-col'>
-      <section class='bg-gray-100 lg:px-8 lg:py-8 shrink-0'>
-          <%= render partial: 'shared/navbar' %>
+    
+    <div class='flex flex-col justify-center'>
+      <!-- Navbar -->
+      <section class='px-5 pt-3 pb-2'>
+        <%= render partial: 'shared/navbar' %>
       </section>
       
-      <section>
-        <main class='flex container mx-auto pt-8 pl-8'>
+      <!-- Page content -->
+      <section> 
+        <main class='flex container mx-auto'>
           <%= yield %>
         </main>
       </section>
     </div>
-
-    
   </body>
 </html>
