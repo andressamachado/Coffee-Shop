@@ -75,9 +75,11 @@
 
           <!-- Dropdown menu --> 
           <div class='cart-menu absolute hidden flex shrink-0 right-0 z-10 mt-2 px-5 pb-5 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none tracking-tight text-stone-500 antialiased' style='z-index:1' role='menu' aria-orientation='vertical' aria-labelledby='user-menu-button' tabindex='-1'>
-            <div id='cart' class=''>
-              <%= render @cart %>
-            </div>
+            <% if @cart and not @cart.line_items.empty? %>
+              <div id='cart' class=''>
+                <%= render @cart %>
+              </div>
+            <% end %>  
           </div>
         </div>
       </div>
